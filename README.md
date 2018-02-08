@@ -6,4 +6,5 @@
 	b. Competitive (Codechef, Spoj, etc.)
 3. Add comments in the code.
 4. Write code in an uderstandable format.
-
+5. For the practice problems, add the link to the problem in the comment.
+6. For the practice problems, add notes for different/difficult questions for future reference and so that all the questions need not be implemented each time for revision.
