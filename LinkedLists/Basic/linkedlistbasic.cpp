@@ -1,3 +1,5 @@
+//insertion,deletion,display,reversal in a linked list
+
 #include<iostream>
 using namespace std;
 
@@ -6,18 +8,18 @@ class node
 {
 	
 public:
-	static int size;
 	int data;
 	node* next;
 };
-int node::size=0;
 class linkedlist
 {
 	node *head;
 public:
+    int size;
 	linkedlist()
 	{
 		head=NULL;
+		size=0;
 	}
 	node* gethead()
 	{
@@ -35,10 +37,10 @@ public:
 		{
 			temp->next=head;
 			head=temp;
-			temp->size++;
+			size++;
 			return;
 		}
-		if(pos>temp->size+1)
+		if(pos>size+1)
 		{
 			cout<<"wrong position";
 			return;
@@ -50,7 +52,7 @@ public:
 		}
 		temp->next=i->next;
 		i->next=temp;
-		temp->size++;
+	    size++;
 	}
 	void del(int pos)
 	{
@@ -60,10 +62,10 @@ public:
 		if(pos==1)
 		{
 			head=head->next;
-			temp->size--;
+			size--;
 			return;
 		}
-		if(pos>temp->size)
+		if(pos>size)
 		{
 		   cout<<"wrong position";
 			return;	
@@ -76,7 +78,7 @@ public:
 		temp=i->next;
 		i->next=temp->next;
 		delete temp;
-		temp->size--;
+		size--;
 	}
 	// void ireverse()
 	// {
