@@ -69,7 +69,6 @@ public:
 		}
 	}
 };
-//int linkedlist::size=0;
 linkedlist merge(linkedlist l1,linkedlist l2)
 {
 	linkedlist l3;
