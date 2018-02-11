@@ -80,36 +80,32 @@ public:
 		delete temp;
 		size--;
 	}
-	// void ireverse()
-	// {
-	// 	node *i,*j,*k;
-	// 	if(head==NULL)
-	// 	{
-	// 		cout<<"list is empty";
-	// 		return;
-	// 	}
-	// 	if(head->next=NULL)
-	// 	{
+	void ireverse()
+	{
+		node *i,*j,*k;
+		if(head==NULL)
+		{
+			cout<<"list is empty";
+			return;
+		}
+		if(head->next==NULL)
+		{
 			
-	// 		return;
-	// 	}
-	// 	i=head;
-	// 	j=head->next;
-	// 	while(j!=NULL)
-	// 	{
-	// 		k=j->next;
-	// 		j->next=i;
-	// 		if(i->next==j)
-	// 			i->next=NULL;
-	// 		i=j;
-	// 		j=k;
-	// 	}
-	// 	head=i;
-	// 	if(head->next==NULL)
-	// 	{
-	// 		cout<<"@";
-	// 	}
-	// }
+			return;
+		}
+		i=head;
+		j=head->next;
+		while(j!=NULL)
+		{ 
+			k=j->next;
+			j->next=i;
+			if(i->next==j)
+				i->next=NULL;
+			i=j;
+			j=k;
+		}
+		head=i;
+	}
 	void rreverse(node *i,node*j)
 	{
 		if(j==NULL)
@@ -157,7 +153,9 @@ int main()
 			       l1.del(pos);      
 			       break; 
 			case 3:l1.display();break;
-			case 4:l1.rreverse(l1.gethead(),l1.gethead()->next);break;
+			case 4://l1.rreverse(l1.gethead(),l1.gethead()->next);
+			       l1.ireverse();
+			       break;
 		}
 		
 		cout<<"continue?? :";cin>>ch;
